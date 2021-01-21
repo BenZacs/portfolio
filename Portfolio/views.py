@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import HttpResponseRedirect
 from .forms import InfoForm
 from .models import Info
 
@@ -28,4 +28,10 @@ def create_port(request):
         high_school_gpa=high_school_gpa, university=university, department=department, faculty=faculty,
         university_gpa=university_gpa)
         info.save()
+        return HttpResponseRedirect(reverse('index'))
     return render(request, 'create-port.html', {'form':form})
+
+def portfolio(request, info_id):
+    info = get_object_or_404(Info, pk=info_id)
+    return render(request, 'portfolio.html', {'info':info})
+

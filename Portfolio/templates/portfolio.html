@@ -1,0 +1,34 @@
+<html>
+<head>
+    {% load static %}
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static '/css/portfolio.css' %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+<div class ="info">
+    <div class= "profile-image">
+        <img src="{{ info.get_photo.url }}"/>
+        <h3 class="name">{{info.first_name}} {{info.last_name}}</h3>
+        <h3>About Me</h3>
+        <h4>{{info.about_me}}</h4>
+        <h3>Interest</h3>
+        <h4>{{info.interest}}</h4>
+        <h3>Address</h3>
+        <h4>{{info.address}}</h4>
+        <h3>Phone Number</h3>
+        <h4>{{info.phone_number}}</h4>
+        <h3>Education</h3>
+        <h3>High School</h3>
+        <h4>Graduated from {{info.high_school}} with GPA {{info.high_school_gpa}}</h4>
+        <h3>Unversity</h3>
+        <h4>Graduated from {{info.university}}</h4>
+        <h4>{{info.department}} {{info.faculty}} with GPA {{info.university_gpa}}</h4>
+    </div>
+
+</div>
+<a href="{% url 'index' %}">Back</a>
+</body>
+</html>

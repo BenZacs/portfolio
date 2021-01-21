@@ -10,7 +10,7 @@ class InfoForm(forms.ModelForm):
         fields = ['photo', 'first_name', 'last_name', 'address', 'about_me',
         'interest', 'phone_number', 'high_school', 'high_school_gpa',
         'university', 'department', 'faculty', 'university_gpa']
-        photo = forms.ImageField()
+        photo = forms.ImageField(required=False)
         first_name = forms.CharField(
             widget=forms.TextInput(
             attrs={'type':'input', 'id':'first_name'}

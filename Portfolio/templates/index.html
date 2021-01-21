@@ -3,8 +3,7 @@
     All Portfolio    
 </h1>
     {% for info in all_info %}
-    <div>
-        {{info.first_name}}
-    </div>
+    <a href="{% url 'portfolio' info.id %}"><div>{{info.first_name}} {{info.last_name}}</div></a>
     {% endfor %}
+<a href="{% url 'create_port'%}">Create Portfolio</a>
 </html>
