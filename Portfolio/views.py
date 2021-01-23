@@ -1,37 +1,20 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
-from .forms import InfoForm
-from .models import Info
+from .forms import EnquiryForm
+from .models import Enquiry
 
-def index(request):
-    all_info = Info.objects.all()
-    return render(request, 'index.html', {'all_info':all_info} )
-
-def create_port(request):
-    form = InfoForm(request.POST, request.FILES)
+def contact_me(request):
+    form = EnquiryForm(request.POST, request.FILES)
     if form.is_valid():
-        photo = form.cleaned_data.get('photo')
         first_name = form.data.get('first_name')
         last_name = form.data.get('last_name')
-        address = form.data.get('address')
-        about_me = form.data.get('about_me')
-        interest = form.data.get('interest')
-        phone_number = form.data.get('phone_number')
-        high_school = form.data.get('high_school')
-        high_school_gpa = form.data.get('high_school_gpa')
-        university = form.data.get('university')
-        department = form.data.get('department')
-        faculty = form.data.get('faculty')
-        university_gpa = form.data.get('university_gpa')
-        info = Info(photo=photo, first_name=first_name, last_name=last_name, address=address,
-        about_me=about_me, interest=interest,phone_number=phone_number, high_school=high_school,
-        high_school_gpa=high_school_gpa, university=university, department=department, faculty=faculty,
-        university_gpa=university_gpa)
-        info.save()
-        return HttpResponseRedirect(reverse('index'))
-    return render(request, 'create-port.html', {'form':form})
+        email = form.data.get('email')
+        company = form.data.get('company')
+        enqury = Enquiry(first_name=first_name, last_name=last_name, email=email, company=company)
+        enqury.save()
+        return HttpResponseRedirect(reverse('portfolio'))
+    return render(request, 'contact.html', {'form':form})
 
-def portfolio(request, info_id):
-    info = get_object_or_404(Info, pk=info_id)
-    return render(request, 'portfolio.html', {'info':info})
+def portfolio(request):
+    return render(request, 'portfolio.html')
 

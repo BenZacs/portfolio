@@ -1,12 +1,11 @@
 from django.contrib import admin
-from .models import Info
+from .models import Enquiry
 
-class InfoAdmin(admin.ModelAdmin):
+class EnquiryAdmin(admin.ModelAdmin):
     """Model for display event infomation in admin page."""
     list_display = (
-        'first_name',
-        'last_name',
-        'phone_number',
+        'company',
+        'email'
     )
 
-admin.site.register(Info,InfoAdmin)
+admin.site.register(Enquiry,EnquiryAdmin)

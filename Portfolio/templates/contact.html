@@ -17,38 +17,18 @@
             <div class="wrap-container">
                 <form class="create-form" method="POST"  enctype="multipart/form-data">
                     {% csrf_token %}
-                    <span class="text-title">Create Portfolio</span>
+                    <span class="text-title">Contact Me</span>
                     <hr class="line">
                     <div class="input">
-                    <div class="photo">
-                    Your Photo
-                    {{ form.photo }}
-                    </div>
                     <br>
                     First Name
                     {{ form.first_name }}
                     Last Name
                     {{ form.last_name}}
-                    Address
-                    {{ form.address}}
-                    About Me
-                    {{ form.about_me }}
-                    Interest
-                    {{ form.interest }}
-                    Phone Number
-                    {{ form.phone_number }}
-                    High School
-                    {{ form.high_school }}
-                    High School GPA
-                    {{ form.high_school_gpa }}
-                    University
-                    {{ form.university }}
-                    Department
-                    {{ form.department }}
-                    Faculty
-                    {{ form.faculty }}
-                    University GPA
-                    {{ form.university_gpa }}
+                    Company
+                    {{ form.company}}
+                    E-mail
+                    {{ form.email }}
                     <br>
                     <button id="submit-button" type="submit" value="POST"> SUBMIT </button>
                     </div>
