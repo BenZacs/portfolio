@@ -6,54 +6,78 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-
-<div class ="info">
-    <div class= "profile-image">
-        <img 
-            width="300" height="340"
-            src="{%static 'img/profile.jpg'%}"
+    <div>
+        <div class="w3-container w3-teal">
+            <h1>Portfolio</h1>
+        </div>
+        <br>
+        <div class="colume4">
+        <img
+            width="290" height="320"
+            src="{% static 'img/profile.jpg' %}"
         />
-        <h3 class="name">Kasidit Wongpaiboon</h3>
-        <h3>About Me</h3>
-        <h4>I am a talented, ambitious and hardworking individual, with
-            broad skills. I am always highly enthused about my work
-            and tasks ahead to learn and self-development so that I can
-            consistently achieve better results.
-            Furthermore, I am adept at handling multiple tasks on a
-            daily basis competently and at working well under
-            pressure</h4>
-        <h3>Interest</h3>
-        <h4>Reading, Movies, Basketball, BoardGames</h4>
-        <h3>Contact Me</h3>
-        <h4>phone Number: 0851280333</h4>
-        <h4>E-mail: Kasidit.wo@ku.th or pep52414@gmail.com</h4>
-        <h3>Education</h3>
-        <h3>High School</h3>
-        <h4>Graduated from Suankularb Wittayalai</h4>
-        <h3>Unversity</h3>
-        <h4>Studied in Kasaetsart University</h4>
-        <h4>Software Engineering</h4>
-        <h3>Experience</h3>
-        <h4>MOVIES API</h4>
-        <h5>The application to get movies data and show it in JSON form in the local
-            with our database that gets data from the data world
-            Used Restful api development with open-api
-            </h5>
-        <a href=https://github.com/BenZacs/How-to-survive><h5>Github Link</h5></a>
-        <h4>KVENT</h4>
-        <h5>A web application that can be implemented and used for optimizing
-            efficiency in online booking and appointment</h5>
-        <a href=https://github.com/bleachjade/Kvent><h5>Github Link</h5></a>
-        <a href=https://kventeventapplication.herokuapp.com><h5>Application Link</h5></a>
-        <h4>HOW TO SURVIVE</h4>
-        <h5>Used Arcade Framework using Python Language - First year project
-        </h5>
-        <a href=https://github.com/BenZacs/How-to-survive><h5>Github Link</h5></a>
     </div>
-
-</div>
-<a href="{% url 'contact' %}">Contact Me</a>
+       
+        <div>
+            <br>
+            <h3 class="name">Kasidit Wongpaiboon</h3>
+            <br>
+            <div class="w3-container"> 
+                <h2>About Me</h2>
+                <p>I am a talented, ambitious and hardworking individual, with
+                broad skills. I am always highly enthused about my work
+                and tasks ahead to learn and self-development so that I can
+                consistently achieve better results.
+                Furthermore, I am adept at handling multiple tasks on a
+                daily basis competently and at working well under
+                pressure.</p>
+            <hr>
+            </div>
+            <article class="w3-container"> 
+                <h2>Education</h2>
+                <h5>- High School</h5>
+                <p>Graduated from Suankularb Wittayalai</p>
+                <h5>- Unversity</h5>
+                <p>Studied in Kasaetsart University: Software Engineering<p>
+                <hr>
+            </article>
+            <section class="w3-container"> 
+                <h2>Experience</h2>
+                <h6>- MOVIES API</h6>
+                <p>The application to get movies data and show it in JSON form in the local
+                with our database that gets data from the data world
+                Used Restful api development with open-api</p>
+                <p><a href=https://github.com/BenZacs/How-to-survive> : Github Link</p></a>
+                <h6>- KVENT</h6>
+                <p>A web application that can be implemented and used for optimizing
+                efficiency in online booking and appointment</p>
+                <p><a href=https://github.com/bleachjade/Kvent> : Github Link</p></a>
+                <p><a href=https://kventeventapplication.herokuapp.com> : Application Link</p></a>
+                <h6>- HOW TO SURVIVE</h6>
+                <p>Used Arcade Framework using Python Language - First year project</p>
+                <p><a href=https://github.com/BenZacs/How-to-survive> : Github Link</p></a>
+                <hr>
+            </section>
+            <section class="w3-container"> 
+                <h2>Interest</h2>
+                <p>Reading, Movies, Basketball, BoardGames</p>
+                <hr>
+            </section>
+            <section class="w3-container"> 
+                <h2>Contact Me</h2>
+                <p>Phone Number: 0851280333</p>
+                <p>E-mail: Kasidit.wo@ku.th or pep52414@gmail.com</p>
+                <a class="btn btn-success" href="{% url 'contact' %}">Contact Me</a>
+                <hr>
+            </section>
+           
+    </div>
 </body>
+
 </html>

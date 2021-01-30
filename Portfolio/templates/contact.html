@@ -4,31 +4,42 @@
 <head>
     {% load static %}
     <title> Kvent </title>
-    <link rel="stylesheet" type="text/css" href="{% static '/css/create-event.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/contact.css' %}">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
 <body>
+    <div>
+        <div class="w3-container w3-teal">
+            <h1>Contact Me</h1>
+        </div>
+        <br>
+    </div>
     <div class="main">
-        <div class="create-container">
-            <div class="wrap-container">
-                <form class="create-form" method="POST"  enctype="multipart/form-data">
+        <div class="colume4">
+            <form class="create-form" method="POST"  enctype="multipart/form-data">
                     {% csrf_token %}
-                    <span class="text-title">Contact Me</span>
-                    <hr class="line">
+                  
                     <div class="input">
-                    <br>
                     First Name
                     {{ form.first_name }}
+                    <br>
+                    <br>
                     Last Name
                     {{ form.last_name}}
+                    <br>
+                    <br>
                     Company
                     {{ form.company}}
+                    <br>
+                    <br>
                     E-mail
                     {{ form.email }}
+                    <br>
                     <br>
                     <button id="submit-button" type="submit" value="POST"> SUBMIT </button>
                     </div>

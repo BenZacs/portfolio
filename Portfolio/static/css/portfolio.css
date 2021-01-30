@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    font-family: oblique, italic;
+    font-size: 1em;
+}
+.colume4{
+    margin: auto;
+}
+
+.colume4 img{
+    margin-left: 38.5%;
+    margin-right: 38.5%;
+}
+
+.name{
+    color: black;
+    margin-left: 41%;
+    margin-right: 41%;
+}

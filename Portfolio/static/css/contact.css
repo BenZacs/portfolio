@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: oblique, italic;
+    
+}
+
+.create-container .wrap-container {
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+}
+
+.wrap-container .create-form {
+    padding: 5em 15em 5em 15em;
+}
+
+.text-title {
+    font-size: 2.2em;
+    line-height: 2em;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+}
+form textarea{
+    width: 80%;
+    font-size: 0.1em;
+    padding: 1em;
+    margin: 1em;
+    resize: none;
+    overflow: hidden;
+    border-bottom: solid 2px #474544;
+    box-sizing: border-box;
+    font: 200 Arial;
+}
+
+form .input .photo {
+    display: block;
+}
+
+form .input {
+   
+    flex-direction: column;
+    font-weight: bold;
+    padding: 1em;
+    margin: 1em;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+  
+}
+form .input textarea {
+    font-size: 1em;
+    padding: 1em;
+    margin: 1em;
+    height: 2em;
+}
+
+form .input button {
+    color: white;
+    justify-content: center;
+    background-color: #003366;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    background-position: center;
+    transition: background 0.8s;
+}
+form .input button:active {
+    box-shadow: 3px 3px 0 lightskyblue;
+    top: 3px;
+}
+form .input button:focus {
+    outline: none;
+}
+
+/*multiplatform device size*/
+@media screen and (max-width: 1024px) {
+    .nav-bar {
+        height: 0.8em;
+        font-size: 1.6em;
+    }
+    .text-title {
+        font-size: 1.4em;
+    }
+    form .input {
+        font-size: 1em;
+        line-height: 2.3em;
+    }
+    form textarea{
+        font-size: 0.7em;
+    }
+    .wrap-container .create-form {
+        padding: 5em 10em 5em 10em;
+    }
+}
+@media screen and (max-width: 778px) {
+    .nav-bar {
+        height: 0.7em;
+        font-size: 1.3em;
+    }
+    .text-title {
+        font-size: 1.1em;
+    }
+    form .input {
+        font-size: 0.8em;
+        line-height: 2em;
+    }
+    form textarea{
+        font-size: 0.6em;
+    }
+    .wrap-container .create-form {
+        padding: 4em 8em 4em 8em;
+    }
+}
+@media screen and (max-width: 540px) {
+    .nav-bar {
+        height: 0.6em;
+        font-size: 1.1em;
+    }
+    .text-title {
+        font-size: 0.8em;
+    }
+    .wrap-container .create-form {
+        padding: 3.5em 6em 3.5em 6em;
+    }
+}
+@media screen and (max-width: 376px) {
+    .nav-bar {
+        font-size: 1em;
+    }
+    .wrap-container .create-form {
+        padding: 3.5em 2.5em 3.5em 2.5em;
+    }
+}
